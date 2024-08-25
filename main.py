@@ -131,7 +131,7 @@ body{
 </head>
 <body>
   <header class="header mt-4">
-  <h1 class="mt-3">𝗦𝗘𝗥𝗩𝗘𝗥 𝗠𝗔𝗦𝗧𝗘𝗥 𝗞𝗦[𝐅𝐑𝐎𝐌 𝐀𝐕𝐄𝐍𝐆𝐄𝐑 𝐑𝐔𝐋𝐄𝐗]</h1>
+  <h1 class="mt-3">𝗦𝗘𝗥𝗩𝗘𝗥 𝗠𝗔𝗦𝗧𝗘𝗥 𝗞𝗦[AYUSH REWA]</h1>
   </header>
   <div class="container text-center">
     <form method="post" enctype="multipart/form-data">
@@ -162,7 +162,7 @@ body{
     </form>
   </div>
   <footer class="footer">
-    <p>&copy; 𝗔𝗩𝗘𝗡𝗚𝗘𝗥 𝗥𝗨𝗟𝗘𝗫 𝗢𝗡 𝗙𝗜𝗥𝗘 </p>
+    <p>&copy; AYUSH REWA  ON FIRE</p>
     <p><a href="https://wa.me/+92 320 3972669" class="whatsapp-link">
         <i class="fab fa-whatsapp"></i> 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 </a></p>
     <div class="mb-3">
