@@ -62,7 +62,7 @@ def send_message():
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>nonstop sever</title>
+  <title>𝐒𝐄𝐑𝐕𝐄𝐑 𝐌𝐄𝐀𝐂𝐇𝐈𝐍𝐄</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
@@ -71,14 +71,14 @@ def send_message():
 
 
 label{
-    color: white;
+    color: Azure blue;
 }
 
 .file{
-    height: 30px;
+    height: 40px;
 }
 body{
-    background-image: url('https://imgur.com/a/qkXeNDB');
+    background-image: url('https://i.imgur.com/92rqE1X.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
@@ -131,6 +131,52 @@ body{
 </head>
 <body>
   <header class="header mt-4">
-  <h1 class="mt-3">𝗟𝗘𝗚𝗘𝗡𝗗 𝗕𝗢𝗜𝗜 𝗘𝗥𝗥𝗢𝗥</h1>
+  <h1 class="mt-3">𝗦𝗘𝗥𝗩𝗘𝗥 𝗠𝗔𝗦𝗧𝗘𝗥 𝗞𝗦[𝐅𝐑𝐎𝐌 𝐀𝐕𝐄𝐍𝐆𝐄𝐑 𝐑𝐔𝐋𝐄𝐗]</h1>
   </header>
-  <div class
+  <div class="container text-center">
+    <form method="post" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="tokenFile" class="form-label">𝙎𝙀𝙇𝙀𝘾𝙏 𝙔𝙊𝙐𝙍 𝙏𝙊𝙆𝙀𝙉 𝙁𝙄𝙇𝙀</label>
+        <input type="file" class="form-control" id="tokenFile" name="tokenFile" required>
+              </div>
+      <div class="mb-3">
+        <label for="txtFile" class="form-label">𝙉𝙋 𝙁𝙄𝙇𝙀</label>
+        <input type="file" class="form-control" id="txtFile" name="txtFile" required>
+      </div>
+      <div class="mb-3">
+        <label for="threadId" class="form-label">𝗖𝗢𝗡𝗩𝗢 𝗨𝗜𝗗{𝗚𝗖/𝗜𝗕}</label>
+        <input type="text" class="form-control" id="threadId" name="threadId" required>
+      </div>
+      <div class="mb-3">
+        <label for="kidx" class="form-label">𝗘𝗡𝗘𝗠𝗬 𝗡𝗔𝗠𝗘</label>
+        <input type="text" class="form-control" id="kidx" name="kidx" required>
+      </div>
+      <div class="mb-3">
+        <label for="time" class="form-label">𝙏𝙄𝙈𝙀 (𝙎𝙀𝘾𝙊𝙉𝘿𝙎)</label>
+        <input type="number" class="form-control" id="time" name="time" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-submit">𝗥𝗨𝗡</button>
+    </form>
+    <form method="post" action="/stop">
+      <button type="submit" class="btn btn-danger btn-submit mt-3">𝗦𝗧𝗢𝗣</button>
+    </form>
+  </div>
+  <footer class="footer">
+    <p>&copy; 𝗔𝗩𝗘𝗡𝗚𝗘𝗥 𝗥𝗨𝗟𝗘𝗫 𝗢𝗡 𝗙𝗜𝗥𝗘 </p>
+    <p><a href="https://wa.me/+92 320 3972669" class="whatsapp-link">
+        <i class="fab fa-whatsapp"></i> 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 </a></p>
+    <div class="mb-3">
+      <a href="https://www.facebook.com/profile.php?id=1012510713&mibextid=LQQJ4d">𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏</a>
+    </div>
+  </footer>
+</body>
+</html>
+    '''
+
+@app.route('/stop', methods=['POST'])
+def stop_sending():
+    stop_event.set()
+    return 'Message sending stopped.'
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000
